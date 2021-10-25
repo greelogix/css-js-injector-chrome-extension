@@ -1,0 +1,10 @@
+body {
+    min-height: , min-width: 420px;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+#msg {
+    display: none;
+}
+.CodeMirror {background: #f8f8f8; border: 1px solid #ccc; height: 120px;}

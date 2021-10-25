@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/buttons-min.css">
+    <script src='js/jquery-1.11.2.min.js'></script>
+    <script src='js/popup.js'></script>
+    <script src='lib/codemirror.js'></script>
+    <script src='js/css.js'></script>
+</head>
+
+<body style="width:400px;" class="css-inject-body">
+    <h1>CSS/JS Injector</h1>
+    <div id='message'>CSS style will be added to the page for temprory. To test the style change. How it reflect on page reload. </div>
+    <form id="z_css_injection">
+        <p>
+            <label for="z_style_editor">CSS</label>
+            <br />
+            <textarea id="z_style_editor" name="z_style_editor" placeholder="/* this css style will be injected to page on page load */" cols="40" rows="2"></textarea>
+        </p>
+        <!-- <p><label> Apply for domain <input type="checkbox" id="apply_on_domain" class="apply_on_domain" name="apply_on_domain"></label> -->
+        <p>
+            <input id="save" type="submit" class="pure-button pure-button-primary" value="Save Style" />
+            <!-- <input id="format_code" type="button" value="Format Code" /> -->
+            <input id="remove_style" class="pure-button pure-button-error" type="button" value="Remove Style" />
+
+        </p>
+        <p id="msgcss"></p>
+    </form>
+
+        <form id="z_js_injection">
+        <p>
+            <label for="z_js_editor">js</label>
+            <br />
+            <textarea id="z_js_editor" name="z_js_editor" placeholder="/* this js will be injected to page on page load */" cols="40" rows="2"></textarea>
+        </p>
+
+        <p>
+            <input id="save" type="submit" class="pure-button pure-button-primary" value="Save JS" />
+            <!-- <input id="format_code" type="button" value="Format Code" /> -->
+            <input id="remove_js" class="pure-button pure-button-error" type="button" value="Remove JS" />
+
+        </p>
+        <p id="msgjs"></p>
+    </form>
+    <input id="view-gl-saved-css-js" class="" type="button" value="View Saved Data" />
+    <div class="gl-saved-css-js-div" style="width: 96%; display: none; border: 1px dotted #333; margin: 5px 0px; padding: 5px; max-height: 300px; overflow-x: auto;"></div>
+    <textarea class="gl-saved-css-js" style="display:none; width: 98%; min-height: 150px;"></textarea>
+    
+
+
+Resources URL:
+JavaScript/CSS URL:
+<ul>
+<li>Paste a direct CSS/JS URL</li>
+<li>Type a library name to fetch from CDNJS</li>
+</ul>
+<!--     <iframe src="https://themeheap.com/banner-text.php" width="360"  style="border: 0;min-height: 300px;"></iframe>
+ --><!--     <a style="float: right" href="http://xaraar.com" class="pure-button pure-button-success" target="_blank">xaraar.com</a> -->
+ <p style="font-size: 10px; color: #ddd;">A product of greelogix.com</p>
+</body>
+
+</html>
