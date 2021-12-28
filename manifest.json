@@ -11,7 +11,7 @@
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "description": "CSS style will be added to the page for temprory. To test the style change. How it reflect on page reload.",
    "manifest_version": 2,
-   "name": "CSS JS injector",
+   "name": "Custom CSS,JS injector on pages",
    "permissions": [ 
       "storage", 
       "tabs"
