@@ -9,15 +9,15 @@
       "matches": [ "\u003Call_urls>" ]
    } ],
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-   "description": "CSS style will be added to the page for temprory. To test the style change. How it reflect on page reload.",
+   "description": "Live CSS JS/ Realtime CSS JS style will be added to the page for temprory. To test the style change. How it reflect on page reload.",
    "manifest_version": 2,
-   "name": "Custom CSS,JS injector on pages",
+   "name": "Live Custom CSS,JS injector on pages",
    "permissions": [ 
       "storage", 
       "tabs",
       "activeTab"
    ],
-   "short_name": "css js inj",
+   "short_name": "realtime css js inj",
    "version": "1.90",
    "web_accessible_resources": [ "script.js" ]
 }
