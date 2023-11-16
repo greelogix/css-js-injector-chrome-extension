@@ -12,13 +12,13 @@ $(function() {
         if (data.css_injector) {
             styles = data.css_injector;
         }
-        $('.gl-saved-css-js').val( JSON.stringify(data.css_injector) );
+        $('.gl-saved-css-js').val(JSON.stringify(data.css_injector));
 
 
         try {
             console.log(data.css_injector)
 
-            $.each(data.css_injector, function( URL, OBJ ){
+            $.each(data.css_injector, function(URL, OBJ) {
                 $('.gl-saved-css-js-div').append("<strong>Saved Values</strong>");
                 $('.gl-saved-css-js-div').append("<br />");
                 $('.gl-saved-css-js-div').append("<br />");
@@ -79,10 +79,10 @@ $(function() {
         });
     });
 
-    $('#view-gl-saved-css-js').on('click', function(){
-            $('.gl-saved-css-js').toggle();
-            $('.gl-saved-css-js-div').toggle();
-        })
+    $('#view-gl-saved-css-js').on('click', function() {
+        $('.gl-saved-css-js').toggle();
+        $('.gl-saved-css-js-div').toggle();
+    })
 
     $('#remove_style').on('click', removeStyle);
     $('#remove_js').on('click', removeJs);
@@ -194,6 +194,7 @@ addPageStyle = function() {
 
 
 addPageJs = function() {
+
     event.preventDefault();
 
     var z_js_editor = $('#z_js_editor').val();
@@ -216,6 +217,14 @@ addPageJs = function() {
 }
 
 saveStylesToStorage = function(s, eid) {
+
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        var activeTab = tabs[0];
+        chrome.tabs.sendMessage(activeTab.id, { "message": "saveStylesToStorageLiveUpate" });
+    });
+
+
+
     chrome.storage.sync.set({
         'css_injector': s
     }, function() {

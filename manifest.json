@@ -14,7 +14,8 @@
    "name": "Custom CSS,JS injector on pages",
    "permissions": [ 
       "storage", 
-      "tabs"
+      "tabs",
+      "activeTab"
    ],
    "short_name": "css js inj",
    "version": "1.90",
